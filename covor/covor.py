@@ -7,3 +7,6 @@ class covor:
         self.cavnas.create_rectangle(0,0,640,480,fill='#000000')
         self.text=text(canvas)
         self.button=start_button(canvas)
+    
+    def loop(self):
+        pass
