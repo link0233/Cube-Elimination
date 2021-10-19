@@ -8,5 +8,5 @@ class covor:
         self.text=text(canvas)
         self.button=start_button(canvas)
     
-    def loop(self):
-        pass
+    def loop(self,key):
+        return self.button.loop(key)

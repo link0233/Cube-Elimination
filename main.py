@@ -21,7 +21,7 @@ class main(Canvas):
     def covort(self):
         self.f=0
         while self.f==0:
-            self.covor.loop()
+            self.f=self.covor.loop(self.key.key)
             self.update()
 
     def update(self):
