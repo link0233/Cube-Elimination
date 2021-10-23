@@ -3,6 +3,7 @@ from time import sleep
 
 from covor.covor import covor
 from key import key
+from level.choose_level_main import choose_level_main as choose_main
 
 class main(Canvas):
     def __init__(self):
@@ -13,6 +14,7 @@ class main(Canvas):
         
         self.covor=covor(self)
         self.key=key(self)
+        self.choose_level=choose_main(self)
 
         self.covort()
         self.load()
@@ -32,7 +34,7 @@ class main(Canvas):
             self.update()
         self.covor.delete()
         self.delete(self.window)
-
+        self.choose_level.choose_level_start()
         self.window=self.create_rectangle(0,0,640,480,fill='#54aec9')
         for i in range(64):
             self.move(self.window,-10,0)
