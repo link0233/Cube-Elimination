@@ -1,9 +1,12 @@
 from level.choose_level import choose
 
 class choose_level_main:
-    def __init__(self,canvas):
+    def __init__(self,canvas,ph):
         self.canvas=canvas
-        self.choose=choose(canvas)
+        self.choose=choose(canvas,ph)
+        self.read()
+
+    def read(self):
         self.text=''
         with open('./level/level.csv','r') as f:
             for i in f:
@@ -16,7 +19,8 @@ class choose_level_main:
         for text in self.textt:
             self.text.append({
                 'level':text[0],
-                'score':text[1]
+                'score':text[1],
+                'star':[text[2],text[3],text[4]]
             })
         print(self.text)
 

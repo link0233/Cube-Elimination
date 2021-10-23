@@ -14,7 +14,7 @@ class main(Canvas):
         
         self.covor=covor(self)
         self.key=key(self)
-        self.choose_level=choose_main(self)
+        self.choose_level=choose_main(self,PhotoImage)
 
         self.covort()
         self.load()
